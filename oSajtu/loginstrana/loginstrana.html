@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in page</title>
+    <link rel="stylesheet" href="styleslogin.css" />
+    <script src="login.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form class="login_form">
+        <div class="font">Korisnicko ime:</div>
+        <input
+          id="usernameInput"
+          autocomplete="off"
+          onkeyup="handleChangeUsername(this.value)"
+          type="text"
+          name="username"
+        />
+        <div id="username_error">Pogresno korisnicko ime!</div>
+        <div class="font1">Lozinka:</div>
+        <input
+          id="passwordInput"
+          autocomplete="off"
+          onkeyup="handleChangePassword(this.value)"
+          type="text"
+          name="password"
+        />
+        <div id="password_error">Pogresna lozinka!</div>
+        <button type="button" onclick="welcome()">ULOGUJ SE</button>
+      </form>
+    </div>
+  </body>
+</html>

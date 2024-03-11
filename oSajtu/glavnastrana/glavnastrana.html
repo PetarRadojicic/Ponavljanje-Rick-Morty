@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glavna strana</title>
+    <script src="glavna.js"></script>
+    <link rel="stylesheet" href="stylesglavna.css">
+    </head>
+<body>
+   <header>
+<div class="pre-header">
+    <div class="container">
+    <img src="/oSajtu/glavnastrana/IS.jpg" width="55px" height="57px" alt="logo">
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                  <a href="/oSajtu/glavnastrana/logout.html">log out</a>
+                  <a href="/oSajtu/glavnastrana/favorites.html">favorites</a>
+                </div>
+              </div>
+              <span style="font-size:33px;cursor:pointer;float: right;" onclick="openNav()">&#9776; </span>
+    </div>
+</div>
+</div>
+</div>
+<div class="main-nav">
+      <div class="dropdown">
+          <input onkeyup="onChangeName(this)" type="text" placeholder="Ime..." name="">
+</div>
+<div class="dropdown">
+  <input onkeyup="onChangeSpecies(this)" type="text" placeholder="Vrste..." name="">
+</div>
+<div class="dropdown">
+    <button class="dropbtn">STATUS</button>
+    <div class="dropdown-content">
+       <a href="#" onclick="filterDataByStatus('alive')">Ziv</a>
+        <a href="#" onclick="filterDataByStatus('dead')">Mrtav</a>
+            <a href="#" onclick="filterDataByStatus('unknown')">Nepoznato</a>
+    </div>
+</div>
+<div class="dropdown">
+
+<button class="dropbtn">ROD</button>
+    <div class="dropdown-content">
+      <a href="#" onclick="filterDataByGender('male')">Musko</a>
+      <a href="#" onclick="filterDataByGender('female')">Zensko</a>
+          <a href="#" onclick="filterDataByGender('genderless')">Bez pola</a>
+          <a href="#" onclick="filterDataByGender('unknown')">Nepoznato</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+   </header>
+  
+ <div id="jsonContainer">
+</div>
+<button onclick="addToFavorites()">Add to Favorites</button>
+</body>
+</html>
+
